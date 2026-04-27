@@ -13,7 +13,7 @@ Each observation includes the specific NIST control (e.g., `DE.CM-02 — Continu
 
 ## Architecture
 
-![Architecture Diagram](generated-diagrams/architecture.png)
+![Architecture Diagram](docs/architecture.png)
 
 ### Application 1 — Governance Dashboard
 
