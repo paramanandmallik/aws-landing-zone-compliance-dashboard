@@ -15,6 +15,10 @@ Each observation includes the specific NIST control (e.g., `DE.CM-02 — Continu
 
 ![Architecture Diagram](docs/architecture.png)
 
+## Dashboard Preview
+
+![Dashboard Screenshot](docs/dashboard.png)
+
 ### Application 1 — Governance Dashboard
 
 A serverless web application that aggregates and displays data from AWS Control Tower and AWS Organizations.
