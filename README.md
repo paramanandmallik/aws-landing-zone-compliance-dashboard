@@ -112,8 +112,18 @@ Cost estimate assumes light-to-moderate usage: ~5 users, data collection every 6
 
 Most services fall within or near the AWS Free Tier for this usage level. The primary cost drivers at scale would be Bedrock model invocations (if running evaluations frequently) and DynamoDB (if the organization has hundreds of accounts). For a large organization with 500+ accounts and daily evaluations, expect ~$15-25/month.
 
-Sources: [Lambda pricing](https://aws.amazon.com/lambda/pricing/), [DynamoDB pricing](https://aws.amazon.com/dynamodb/pricing/on-demand/), [API Gateway pricing](https://aws.amazon.com/api-gateway/pricing/), [Bedrock pricing](https://aws.amazon.com/bedrock/pricing/), [AgentCore pricing](https://aws.amazon.com/bedrock/agentcore/pricing/), [CloudFront pricing](https://aws.amazon.com/cloudfront/pricing/)
+Sources: [Lambda](https://aws.amazon.com/lambda/pricing/), [DynamoDB](https://aws.amazon.com/dynamodb/pricing/on-demand/), [API Gateway](https://aws.amazon.com/api-gateway/pricing/), [Bedrock](https://aws.amazon.com/bedrock/pricing/), [AgentCore](https://aws.amazon.com/bedrock/agentcore/pricing/), [CloudFront](https://aws.amazon.com/cloudfront/pricing/)
 
-## Live Dashboard
+## Deployment
 
-https://d3468836x8w73d.cloudfront.net
+```bash
+# Install dependencies
+cd frontend && npm install && npm run build && cd ..
+pip install -r requirements.txt
+
+# Deploy infrastructure
+cdk deploy
+
+# Trigger initial data collection
+aws lambda invoke --function-name <DataCollectorFunction> --payload '{"source":"manual"}' /dev/stdout
+```
