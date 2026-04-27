@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.egg-info/
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Build artifacts
+frontend/build/
+frontend/tsconfig.tsbuildinfo
+cdk.out/
+lambda_layer/
+
+# IDE
+.vscode/
+.idea/
+
+# Kiro (specs, steering, settings)
+.kiro/
+
+# Environment
+frontend/.env
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated
+generated-diagrams/
+
+# Misc
+Success.md
